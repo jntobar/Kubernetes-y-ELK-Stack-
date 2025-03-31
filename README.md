@@ -1,5 +1,5 @@
 # DevOps ELK & Web: Monitoreo y Despliegue en KubeSphere
-Este proyecto en basado en una prueba profesional para evaluar las habilidades de estudiantes para el area de Seguridad logica-Telconet
+Este proyecto es basado en una prueba profesional para evaluar las habilidades de estudiantes para el area de Seguridad logica-Telconet
 ![Vista Previa del Portafolio](img/kubesphere.jpeg)  
 ![Vista Previa del Portafolio](img/Elastic.jpeg) 
 Este documento detalla los pasos para la instalación y configuración de un entorno DevOps utilizando ELK Stack y el despliegue de una aplicación web en KubeSphere.
