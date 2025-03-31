@@ -2,7 +2,7 @@
 Este proyecto en basado en una prueba profesional para evaluar las habilidades de estudiantes para el area de Seguridad logica-Telconet
 
 Este documento detalla los pasos para la instalación y configuración de un entorno DevOps utilizando ELK Stack y el despliegue de una aplicación web en KubeSphere.
-Kubernetes y ELK Stack:
+--Kubernetes y ELK Stack:
 - Se requiere que se despliegue kubesphere "All-in-One" en la VM proporcionada.
 - Una vez desplegado el ambiente de kubernetes, proceder con la instalación de Elastic Cloud on Kubernetes cumpliendo los siguientes puntos:
 - Todos los componenetes que se levanten deben estar dentro del namespace "elk-stack-ns".
@@ -16,9 +16,9 @@ Kubernetes y ELK Stack:
 ## 1. Instalación de la VM para el Servidor
 
 ### 1.1 Requisitos de la VM
-- **Sistema Operativo**: AlmaLinux 9
-- **CPU**: Mínimo 4 vCPUs
-- **RAM**: Mínimo 8GB
+- **Sistema Operativo**: AlmaLinux 8
+- **CPU**: Mínimo 6 vCPUs
+- **RAM**: Mínimo 9GB
 - **Almacenamiento**: Mínimo 50GB
 
 ### 1.2 Configuración de la VM
@@ -28,18 +28,27 @@ dnf update -y
 
 # Configurar hostname
 hostnamectl set-hostname kubesphere-server
-
-# Configurar firewall (opcional)
-firewall-cmd --add-port=6443/tcp --permanent
-firewall-cmd --reload
 ```
 
 ---
 
 ## 2. Instalación de KubeSphere All-in-One
 
+### 🔧 Requisitos Previos  
+
+Antes de comenzar con la implementación, asegúrate de cumplir con los siguientes requisitos:  
+
+#### 📌 Dependencias del Sistema  
+
+| Dependencia  | Kubernetes ≥ 1.18 | Kubernetes < 1.18 |
+|-------------|-------------------|-------------------|
+| `socat`     | Obligatorio       | Opcional pero recomendado |
+| `conntrack` | Obligatorio       | Opcional pero recomendado |
+| `ebtables`  | Opcional pero recomendado | Opcional pero recomendado |
+| `ipset`     | Opcional pero recomendado | Opcional pero recomendado |
+
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kubesphere/ks-installer/master/scripts/install.sh | bash
+sudo dnf install -y socat conntrack-tools ebtables ipset
 ```
 
 Acceder a la UI de KubeSphere desde `http://<IP-SERVIDOR>:30880`
