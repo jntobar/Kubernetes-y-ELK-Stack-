@@ -3,13 +3,13 @@ Este proyecto en basado en una prueba profesional para evaluar las habilidades d
 
 Este documento detalla los pasos para la instalación y configuración de un entorno DevOps utilizando ELK Stack y el despliegue de una aplicación web en KubeSphere.
 Kubernetes y ELK Stack:
-- **Se requiere que se despliegue kubesphere "All-in-One" en la VM proporcionada.
-- **Una vez desplegado el ambiente de kubernetes, proceder con la instalación de Elastic Cloud on Kubernetes cumpliendo los siguientes puntos:
-- **Todos los componenetes que se levanten deben estar dentro del namespace "elk-stack-ns".
-- **La versión del Custom Resource Definition del ELK debe ser la 2.12
-- **La versión de las imagenes a usar de elasticsearch, kibana y logstash sea 8.13.
-- **El cluster de elasticsearch debe tener como nombre "elk-cluster".
-- **Se espera que el Kibana pueda ser accedido desde el puerto 30555 via web
+- Se requiere que se despliegue kubesphere "All-in-One" en la VM proporcionada.
+- Una vez desplegado el ambiente de kubernetes, proceder con la instalación de Elastic Cloud on Kubernetes cumpliendo los siguientes puntos:
+- Todos los componenetes que se levanten deben estar dentro del namespace "elk-stack-ns".
+- La versión del Custom Resource Definition del ELK debe ser la 2.12
+- La versión de las imagenes a usar de elasticsearch, kibana y logstash sea 8.13.
+- El cluster de elasticsearch debe tener como nombre "elk-cluster".
+- Se espera que el Kibana pueda ser accedido desde el puerto 30555 via web
 
 ---
 
